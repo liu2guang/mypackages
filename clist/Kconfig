@@ -1,0 +1,16 @@
+
+config PKG_USING_CLIST
+    bool "clist: C doubly linked list implementation"
+    default n
+
+if PKG_USING_CLIST
+
+    config PKG_CLIST_PATH
+        string
+        default "/packages/system/clist"
+
+    config PKG_CLIST_VER
+        string
+        default "v1.0.0"
+
+endif
