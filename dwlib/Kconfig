@@ -1,0 +1,58 @@
+
+config PKG_USING_DWLIB
+    bool "dwlib: c operation lib for dwin display screen"
+    default n
+
+if PKG_USING_DWLIB
+
+    config PKG_DWLIB_PATH
+        string
+        default "/packages/multimedia/dwlib"
+
+    config PKG_DWLIB_VER
+        string
+        default "v1.1.0-alpha"
+
+choice
+    prompt "Info print used api config"
+    default PKG_DWLIB_PRINT_MODE_RTT
+
+    config PKG_DWLIB_PRINT_RTT
+        bool "RT-Thread"
+    config PKG_DWLIB_PRINT_ELOG
+        bool "EASYLOGGER"
+    config PKG_DWLIB_PRINT_C
+        bool "C-LIB"
+endchoice
+
+choice
+    prompt "Memory manager used api config"
+    default PKG_DWLIB_MM_RTT
+
+    config PKG_DWLIB_MM_RTT
+        bool "RT-Thread"
+    config PKG_DWLIB_MM_C
+        bool "C-LIB"
+endchoice
+
+menu "DWLIB Plugins Options"
+
+    config PKG_DWLIB_ENABLE_SM
+    bool
+    prompt "Enable dwlib space manager plugins"
+    default n
+
+    config PKG_DWLIB_SM_NAME_LENGTH
+    int
+    prompt "Space manager name buffer length"
+    default 8
+    depends on PKG_DWLIB_ENABLE_SM
+
+    config PKG_DWLIB_SM_SPACE_MAXSIZE
+    int
+    prompt "Space manager space addr max size"
+    default 4096
+    depends on PKG_DWLIB_ENABLE_SM
+endmenu
+
+endif
