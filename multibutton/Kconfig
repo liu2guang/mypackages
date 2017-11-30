@@ -1,0 +1,16 @@
+
+config PKG_USING_MULTIBUTTON
+    bool "multibutton: event-driven button driver for embedded"
+    default n
+
+if PKG_USING_MULTIBUTTON
+
+    config PKG_MULTIBUTTON_PATH
+        string
+        default "/packages/multimedia/multibutton"
+
+    config PKG_MULTIBUTTON_VER
+        string
+        default "v1.0.0"
+
+endif
