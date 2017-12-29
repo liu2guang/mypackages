@@ -1,0 +1,76 @@
+
+config PKG_USING_DWIN
+    bool "dwin: c operation lib for dwin display screen"
+    default n
+
+if PKG_USING_DWIN
+
+    config PKG_DWLIB_PATH
+        string
+        default "/packages/multimedia/dwin"
+
+    config PKG_DWLIB_VER
+        string
+        default "v1.4.1"
+
+config PKG_DWIN_DEBUG
+    int
+    prompt "Debug info output level"
+    default 1
+
+config PKG_DWIN_HEAD_H
+    int
+    prompt "Frame head high byte"
+    default 0x5A
+
+config PKG_DWIN_HEAD_L
+    int
+    prompt "Frame head low byte"
+    default 0xA5
+
+config PKG_DWIN_VAR_MAX_BYTE
+    int
+    prompt "Var space max byte"
+    default 4096
+
+config PKG_DWIN_WATCH_PRIO
+    int
+    prompt "Watcher thread prio"
+    default 10
+
+config PKG_DWIN_SPACE_NAME_LEN
+    int
+    prompt "Space name length"
+    default 10
+
+menu "Dwin Plugins Options"
+
+    config PKG_DWIN_ENABLE_PLUGIN_ICON
+        bool
+        prompt "Enable plugin icon"
+        default n
+
+    config PKG_DWIN_ENABLE_PLUGIN_BUTTON
+        bool
+        prompt "Enable plugin button "
+        default n
+
+    config PKG_DWIN_BUTTON_PRESS_VALUE
+	    int
+	    depends on PKG_DWIN_ENABLE_PLUGIN_BUTTON
+	    prompt "Button press value"
+	    default 0x0D0D
+
+    config PKG_DWIN_ENABLE_PLUGIN_TEXTBOX
+        bool
+        prompt "Enable plugin textbox "
+        default n
+
+    config PKG_DWIN_ENABLE_PLUGIN_INPUTBOX
+        bool
+        prompt "Enable plugin inputbox "
+        default n
+
+endmenu
+
+endif

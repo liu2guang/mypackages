@@ -1,0 +1,16 @@
+{
+    "name": "dwin",
+    "description": "dwin: c operation lib for dwin display screen",
+    "keywords": [
+        "dwlib"
+    ],
+    "readme": "dwin: c operation lib for dwin display screen",
+    "site": [
+        {
+            "version": "v1.4.1",
+            "URL": "https://github.com/liu2guang/dwin.git",
+            "filename": "dwin-1.4.1.zip",
+            "VER_SHA" : "d20b29ac6cc49efb8390c8cd0c0e6a7d3ca6ffd4"
+        }
+    ]
+}
