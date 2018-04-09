@@ -1,0 +1,11 @@
+{
+    "name": "LittlevGL2RTT",
+    "description": "LittlevGL2RTT: The LittlevGl gui lib adapter RT-Thread",
+    "keywords": [
+        "LittlevGL2RTT"
+    ],
+    "site" : [
+    {"version" : "v0.0.1", "URL" : "https://github.com/liu2guang/LittlevGL2RTT.git", "filename" : "LittlevGL2RTT.zip","VER_SHA" : "105686c0f66e9ab047ca3b937c1e4f0c361df1bd"},
+    {"version" : "latest", "URL" : "https://github.com/liu2guang/LittlevGL2RTT.git", "filename" : "LittlevGL2RTT.zip","VER_SHA" : "master"}
+    ]
+}

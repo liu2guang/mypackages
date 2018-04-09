@@ -1,0 +1,37 @@
+# Kconfig file for package LittlevGL2RTT
+config PKG_USING_LITTLEVGL2RTT
+    bool "LittlevGL2RTT: The LittlevGl gui lib adapter RT-Thread"
+    default n
+
+if PKG_USING_LITTLEVGL2RTT
+
+    config PKG_LITTLEVGL2RTT_PATH
+        string
+        default "/packages/system/LittlevGL2RTT"
+
+    choice
+        prompt "LittlevGL2RTT version"
+        help
+            Select the LittlevGL2RTT version
+
+        config PKG_USING_LITTLEVGL2RTT_V001
+            bool "v0.0.1"
+
+        config PKG_USING_LITTLEVGL2RTT_LATEST_VERSION
+            bool "latest"
+    endchoice
+          
+    config PKG_LITTLEVGL2RTT_VER
+       string
+       default "v0.0.1"    if PKG_USING_LITTLEVGL2RTT_V001
+       default "latest"    if PKG_USING_LITTLEVGL2RTT_LATEST_VERSION
+
+menu "LittlevGL2RTT Options"
+    config LITTLEVGL2RTT_USING_DEMO
+        bool
+        prompt "LittlevGL2RTT demo example"
+        default y
+endmenu
+
+endif
+
