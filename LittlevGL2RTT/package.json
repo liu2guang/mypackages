@@ -5,7 +5,7 @@
         "LittlevGL2RTT"
     ],
     "site" : [
-    {"version" : "v0.0.1", "URL" : "https://github.com/liu2guang/LittlevGL2RTT.git", "filename" : "LittlevGL2RTT.zip","VER_SHA" : "2363fb73cb145f802264a42e78c5658da8c6e3d4"},
+    {"version" : "v0.0.1", "URL" : "https://github.com/liu2guang/LittlevGL2RTT.git", "filename" : "LittlevGL2RTT.zip","VER_SHA" : "3c161070ddd18e42e2cdf220b9d638d38b4de23a"},
     {"version" : "latest", "URL" : "https://github.com/liu2guang/LittlevGL2RTT.git", "filename" : "LittlevGL2RTT.zip","VER_SHA" : "master"}
     ]
 }
