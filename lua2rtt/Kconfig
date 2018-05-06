@@ -1,0 +1,24 @@
+# Kconfig file for package lua2rtt
+config PKG_USING_LUA2RTT
+    bool "lua2rtt: The elua5.1.4 adapter RT-Thread"
+    default n
+
+if PKG_USING_LUA2RTT
+
+    config PKG_LUA2RTT_PATH
+        string
+        default "/packages/language/lua2rtt"
+
+    choice
+        prompt "lua2rtt version"
+        help
+            Select the lua2rtt version
+
+        config PKG_USING_LUA2RTT_LATEST_VERSION
+            bool "latest"
+    endchoice
+          
+    config PKG_LUA2RTT_VER
+       string
+       default "latest" if PKG_USING_LUA2RTT_LATEST_VERSION
+endif

@@ -1,0 +1,10 @@
+{
+    "name": "lua2rtt",
+    "description": "lua2rtt: The elua5.1.4 adapter RT-Thread",
+    "keywords": [
+        "lua2rtt"
+    ],
+    "site" : [
+    {"version" : "latest", "URL" : "https://github.com/liu2guang/lua2rtt.git", "filename" : "lua2rtt.zip","VER_SHA" : "master"}
+    ]
+}
