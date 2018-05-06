@@ -2,6 +2,7 @@
 config PKG_USING_LUA2RTT
     bool "lua2rtt: The elua5.1.4 adapter RT-Thread"
     default n
+    select RT_USING_LIBC if PKG_USING_LUA2RTT
 
 if PKG_USING_LUA2RTT
 
